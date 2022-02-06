@@ -275,3 +275,9 @@ There is a txt file with all of the translations i have so far, so you can look 
 # I need help with decompiling
 Most of the game is obfuscated due to il2cpp, but if you use UnityExplorer and go around the game mess with things, run a few functions and then write down what you think they do you can create a new issue forum and post your findings there and if it works i'll add it to the list of classes and what they do
 
+# DONT hack in public lobbys
+
+# Sources
+
+https://www.unknowncheats.me/forum/unity/422559-il2cpp-modding-quick-start-guide.html
+https://github.com/CodeName-Anti/CrabGame-Cheat/tree/12e14476d4a5f35b40bf8b006013ee9a12c69db6
