@@ -1,3 +1,23 @@
 GameManager = MonoBehaviourPublicDi2UIObacspDi2UIObUnique;
 Prompt = MonoBehaviourPublicGaprLi1ObGaprInUnique;
 GameLoop = MonoBehaviourPublicObInLi1GagasmLi1GaUnique;
+
+
+
+
+
+
+Extentions:
+GameManager
+
+Weird Launch Command (dont know how works)
+MonoBehaviourPublicDi2UIObacspDi2UIObUnique.Method_Public_Void_UInt64_UInt64_Vector3_PDM_2
+(playerid, playerid, vector3)
+
+Strange Kill Command, i think from getting crushed mabye?
+MonoBehaviourPublicDi2UIObacspDi2UIObUnique.Method_Public_Void_UInt64_UInt64_Vector3_PDM_1
+(playerid, playerid, vector3)
+
+Kill command but dosent spawn body or make spectator
+MonoBehaviourPublicDi2UIObacspDi2UIObUnique.Method_Public_Void_UInt64_PDM_1
+(playerid)
