@@ -189,4 +189,89 @@ Goto originalUpdate and where it says SOME_GAME_TYPE set that to EventSystem
 
 Comment out the other scripts for Awake and Start.
 
+# Actually Modding the game
+
+Create a New Class and call it TrainerComponent, then paste this code in:
+
+```Csharp
+using System;
+using System.Collections.Generic;
+using BepInEx;
+using UnhollowerBaseLib;
+using UnhollowerRuntimeLib;
+using HarmonyLib;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using Object = UnityEngine.Object;
+using Input = BepInEx.IL2CPP.UnityEngine.Input;
+ 
+namespace Trainer
+{
+    public class TrainerComponent : MonoBehaviour
+    {
+        public TrainerComponent(IntPtr ptr) : base(ptr)
+        {
+            BepInExLoader.log.LogMessage("[Trainer] Entered Constructor");
+        }
+ 
+		// Harmony Patch's must be static!
+        [HarmonyPostfix]
+        public static void Awake() 
+        {
+			BepInExLoader.log.LogMessage("[Trainer] I'm Awake!");
+        }
+ 
+        [HarmonyPostfix]
+        public static void Start()
+        {
+			BepInExLoader.log.LogMessage("[Trainer] I'm Starting Up...");
+        }
+ 
+        [HarmonyPostfix]
+        public static void Update()
+        {
+			//BepInExLoader.log.LogMessage("[Trainer] I'm Updating, disable this message after testing.");
+			
+			// Note the difference for getting keypress.
+            if (Input.GetKeyInt(BepInEx.IL2CPP.UnityEngine.KeyCode.Backslash) && Event.current.type == EventType.KeyDown)
+            {
+                //... do something
+ 
+                Event.current.Use();
+            }
+		}
+	}
+}
+```
+
+Unfortunately the Start and Awake Functions wont work until someone finds a class to hook it onto but the update function will work
+
+There is also a difference for somethings like getting Keypresses as you can see its now BepInEx.IL2CPP.UnityEngine.Keycode
+
+# Lets decompile the game
+
+Now one mod that will be extremly useful for getting scripts and looking around the game is unity explorer for il2cpp
+
+Get it here: https://github.com/sinai-dev/UnityExplorer/releases/tag/4.5.5
+Make sure you download the il2cpp Bepinex one.
+Then Extract it and get the .dll file
+Then in crab game folder goto **bepinex/plugins** and paste it there, thats where you put all the mods
+
+# The final step to making a mod
+In the top middle area on your screen it will say Debug (if it dosent skip this step), click on it and set it to Release
+
+Now you can build your mod hit control+b or goto the build tab and click build
+goto where you mod project folder is usually in
+
+C:\Users\YOURUSERNAMEHERE\source\repos\PROJECTNAMEHERE
+
+then goto the folder with your project name on it then bin, then open Release and you should find a bunch of dlls, just copy the one with your project name on it
+and the paste it in **bepinex\plugins** , now run your game.
+
+# Cool things you can do
+There is a txt file with all of the translations i have so far, so you can look through them with UnityExplorer or code with them and make a bunch of cool things
+
+# I need help with decompiling
+Most of the game is obfuscated due to il2cpp, but if you use UnityExplorer and go around the game mess with things, run a few functions and then write down what you think they do you can create a new issue forum and post your findings there and if it works i'll add it to the list of classes and what they do
 
