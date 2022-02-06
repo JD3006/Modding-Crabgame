@@ -240,8 +240,8 @@ namespace Trainer
  
                 Event.current.Use();
             }
-		}
 	}
+    }
 }
 ```
 
