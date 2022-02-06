@@ -1,1 +1,8 @@
-e
+// Local
+PersistentPlayerData = MonoBehaviourPublicBofrhnBoObInUnique;
+PlayerMovement = MonoBehaviourPublicGaplfoGaTrorplTrRiBoUnique;
+PlayerStatus = MonoBehaviourPublicObcumaObInplInObUnique;
+
+// Online
+PlayerManager = MonoBehaviourPublicCSstReshTrheObplBojuUnique;
+OnlinePlayerMovement = MonoBehaviourPublicObVeSiVeRiSiAnVeanTrUnique;
