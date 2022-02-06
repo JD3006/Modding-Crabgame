@@ -21,3 +21,13 @@ MonoBehaviourPublicDi2UIObacspDi2UIObUnique.Method_Public_Void_UInt64_UInt64_Vec
 Kill command but dosent spawn body or make spectator
 MonoBehaviourPublicDi2UIObacspDi2UIObUnique.Method_Public_Void_UInt64_PDM_1
 (playerid)
+
+GameLoop
+
+Sent me back to dorm:
+MonoBehaviourPublicObInLi1GagasmLi1GaUnique.Method_Public_Void_UInt64_PDM_7
+(playerid)
+MonoBehaviourPublicObInLi1GagasmLi1GaUnique.Method_Public_Void_UInt64_PDM_4
+(playerid)
+MonoBehaviourPublicObInLi1GagasmLi1GaUnique.Method_Public_Void_UInt64_PDM_1
+(playerid)
