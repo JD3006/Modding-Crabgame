@@ -2,9 +2,7 @@
 How to mod crab game and useful tools for it
 
 # Current Mods I've Found (read through this then mess around with these)
-https://github.com/o7Moon/CrabGame.MapMod
-Custom Maps
-
+https://jaxjamesdavis.wixsite.com/crabgamemods
 
 # How to do it?
 First, off your going to need bepinex 6.0 for ill2cpp, Crab Game is an ill2cpp game meaning its much more annoying to mod and stuff is obfuscated.
